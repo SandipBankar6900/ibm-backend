@@ -4,7 +4,7 @@ const cors = require("cors");
 const { connection } = require("./db");
 const { userRouter } = require("./routes/user.routes");
 const { bugRouter } = require("./routes/bug.routes");
-const {googleUserrouter}=require("./routes/googleUser.routes")
+
 
 
 const app = express();
@@ -18,7 +18,7 @@ app.use("/user", userRouter)
 
 app.use("/api", bugRouter)
 
-app.use("/auth",googleUserrouter)
+
 
 app.listen(process.env.PORT, async () => {
     try {
